@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+    <script>
+        $().ready(function (){
+            $("#button").click(function (){
+                let v=$("#num").val()
+                let sqr=v*v;
+                $("p").text(sqr)
+            } )
+        })
+
+
+    </script>
+</head>
+<body>
+    <div class="title">
+        <h1> Using jQuery <h1>
+    </div>
+    <div class="inputdata">
+        <p>number: <input type="text" id="num"></p>
+        <button id="button" type="button">square</button>
+    </div>
+</body>
+</html>

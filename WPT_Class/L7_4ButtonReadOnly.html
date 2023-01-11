@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+     <script>
+        $().ready(()=>{
+            $("#b1").click(()=>{
+                let bull=$("#t1").val()
+                console.log("is it okay")
+                if($("#t1").prop("readonly")){
+                    $("#t1").prop("readonly",false)
+                    $("#t1").prop("placeholder","now editable")
+                }
+                else{
+                    $("#t1").prop("readonly",true)
+                    $("#t1").prop("placeholder","this is readonly")
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <button type="button" id="b1">Change it</button>
+    <input type="text" id="t1" readonly placeholder="this is readonly">
+</body>
+</html>

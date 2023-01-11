@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+</head>
+
+<body>
+    <div class="top">
+        <h1>Age Calculator</h1>
+    </div>
+    <table>
+        <tr>
+            <th>
+                DOB: <input name="dob" id="dob" type="date" min="1900-01-01" max="2005-01-01">
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <button type="button" 
+                        onclick="age()">Find my age</button>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <textarea   id="age"
+                            class="age"
+                            readonly
+                            style="border:0"
+                            hidden="true"
+                            rows="5"
+                            cols="20">
+                </textarea>
+            </th>
+        </tr>
+    </table>
+
+</body>
+<script>
+    function age() {
+        let dob = document.getElementById("dob").value
+        let arr = dob.split("-");
+        let newDob = new Date(arr[0], arr[1] - 1, arr[2])
+        let today = new Date()
+        let rawAge = (today - newDob) / 1000 / 60 / 60 / 24 / 365
+        let userage = Math.trunc(rawAge)
+        let rawMonth = (rawAge - userage) * 12
+        let month = Math.trunc(rawMonth)
+
+        let thisB = new Date(2023, arr[1] - 1, arr[2])
+        var brr=["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+
+        document.getElementById("age").hidden = false
+        console.log(userage, " ", month)
+        document.getElementById("age").value = `${userage} years ${month} months Birthday on ${brr[thisB.getDay()-1]}`
+        document.getElementById("age").hidden = false
+    }
+</script>
+
+</html>

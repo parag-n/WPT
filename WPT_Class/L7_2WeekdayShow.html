@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>DayName will come here</p>
+    <select>
+        <option value="monday">monday</option>
+        <option value="tuesday">tuesday</option>
+        <option value="wednesday">wednesday</option>
+        <option value="thursday">thursday</option>
+        <option value="friday">friday</option>
+    </select>
+    <input type="text">
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous">
+    $().ready(()=>{
+        $("select").change(function(){
+                let dname=$("select").val()
+                let str=dname.slice(0,3).toUpperCase()
+                console.log("select is changed!")
+                let name = $("select").val()
+                $("input").val(name)
+            })
+    })
+    $("select").hide(2000)
+</script>
+
+</html>

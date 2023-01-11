@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous">
+        $("#d2").hide()
+        $().ready(function(){
+            $("#c1").change(function(){
+                console.log("$("#c1")")
+                if($("#c1").val()){
+                    $("#d2").show()
+                }
+                else $("#d2").hide()
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="d1">
+        <input type="checkbox" id="c1">
+    </div>
+    <div id="d2">
+        <input type="text" id="in1">
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hello</title>
+	<link rel="stylesheet" href="L5_2JSFun.css" type="text/css">
+</head>
+
+<body>
+	<div class="body1">
+		<table>
+			<tr>
+				<th>
+					<input type="text" name="num1" id="num1" placeholder="number 1">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<input type="text" name="num2" id="num2" placeholder="number 2">
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<button type="button" onclick="calculate()">addition</button>
+				</th>
+			</tr>
+			<tr>
+				<th>
+					<input type="text" name="ans" id="ans" placeholder="answer">
+				</th>
+			</tr>
+			<tr>
+				<th>Enter name: <input type="checkbox" onchange="changing()">
+				<th>
+			</tr>
+			<tr>
+				<th><input type="text" readonly="true" id="namefield" placeholder="readonly">
+				<th>
+			</tr>
+
+		</table>
+		<div>
+</body>
+<script>
+	function calculate(){
+			alert("Hello!")
+			var n1=parseInt(document.getElementById("num1").value)
+			var n2=parseInt(document.getElementById("num2").value)
+			var answer=n1+n2
+			document.getElementById("ans").value=answer
+		}
+		
+		function changing(){
+			var check=document.getElementById("namefield").readonly.value
+			if(check==true){
+				document.getElementById("namefield").readonly="false"
+				document.getElementById("namefield").placeholder="editable"
+			}
+			else{
+				document.getElementById("namefield").readonly="true"
+				document.getElementById("namefield").placeholder="readonly"
+			}
+		}
+</script>
+
+</html>
