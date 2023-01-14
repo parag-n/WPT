@@ -1,0 +1,17 @@
+.cart{
+    /* display: block; */
+    width: fit-content;
+    margin: auto;
+    width: 75vw;
+    padding: 5px;
+    
+}
+.add{
+    text-align: center;
+    box-shadow: 5px 5px 5px white, -5px -5px 5px gray;
+    border-radius: 25px;
+    padding:20px;
+}
+.input{
+    text-align: center;
+}
